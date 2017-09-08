@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "deploy": "npm run build && npm run git-commit && npm run git-push"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,17 @@
   "bugs": {
     "url": "https://github.com/ralrwais/REI-Mobile/issues"
   },
-  "homepage": "https://github.com/ralrwais/REI-Mobile#readme"
+  "homepage": "https://github.com/ralrwais/REI-Mobile#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
+  }
 }
