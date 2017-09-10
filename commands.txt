@@ -1,0 +1,35 @@
+
+command that uploads data (zip file)
+
+curl -X POST -H "Authorization: Bearer 82d39ceaa0ef122c78ea31fed8aaa84ce9343a25" -H "Cache-Control: no-cache" -H "Content-Type: multipart/form-data" -F "type=image" -F "path=https://rei-mobile.herokuapp.com/data" https://api.einstein.ai/v2/vision/datasets/upload/sync
+
+
+// dataset ID 1012748
+
+
+command that uses dataset ID to train the datasets
+
+curl -X POST -H "Authorization: Bearer 82d39ceaa0ef122c78ea31fed8aaa84ce9343a25" -H "Cache-Control: no-cache" -H "Content-Type: multipart/form-data" -F "name=grandcanyon and yosemite Model" -F "datasetId=1012748" https://api.einstein.ai/v2/vision/train
+
+// model ID E4RA6UD3RPQBJX2MJEAEXJQM3E
+
+command that checks the status of data being trained
+
+curl -X GET -H "Authorization: Bearer 82d39ceaa0ef122c78ea31fed8aaa84ce9343a25" -H "Cache-Control: no-cache" https://api.einstein.ai/v2/vision/train/E4RA6UD3RPQBJX2MJEAEXJQM3E
+
+// model tweaking/ getting model metrics command
+
+curl -X GET -H "Authorization: Bearer 82d39ceaa0ef122c78ea31fed8aaa84ce9343a25" -H "Cache-Control: no-cache" https://api.einstein.ai/v2/vision/models/E4RA6UD3RPQBJX2MJEAEXJQM3E
+
+
+//command that predicts probability of image being one/the other label
+
+curl -X POST -H "Authorization: Bearer 82d39ceaa0ef122c78ea31fed8aaa84ce9343a25" -H "Cache-Control: no-cache" -H "Content-Type: multipart/form-data" -F "sampleLocation=https://www.destinationgoldcoast.com/Portals/0/Images/Blog/GarethMcGuigan/top-10-waterfalls-opt.jpg" -F "modelId=E4RA6UD3RPQBJX2MJEAEXJQM3E" https://api.einstein.ai/v2/vision/predict
+
+
+
+
+
+
+
+
