@@ -10,6 +10,7 @@ class App extends React.Component{
 			<h1>REI</h1>
 			<h3>Adventure Postcard</h3>
 		</div>
+		<input className="camera" type="file" accept="image/*;capture=camera" />
 		</div>
 		)
 	}
