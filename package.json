@@ -24,7 +24,9 @@
     "css-loader": "^0.28.7",
     "jest": "^21.0.2",
     "jsonwebtoken": "^8.0.0",
+    "mdbootstrap": "^4.4.1",
     "react": "^15.6.1",
+    "react-bootstrap": "^0.31.3",
     "react-dom": "^15.6.1",
     "request": "^2.81.0",
     "style-loader": "^0.18.2"

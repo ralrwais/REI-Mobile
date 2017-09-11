@@ -34,9 +34,28 @@ img {
 	letter-spacing: 2px;
 	font-family: 'Lobster', cursive;
 }
-.camera {
-	font-size: 20px;
-}
+.camera-input-wrapper {
+    width: 150px;
+    height: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  .camera-input-wrapper > input[type="file"] {
+    font-size: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+  }
+  .camera-input-wrapper > #btn-camera-input {
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    font-size: 15px;
+  }
 @media screen and (max-width: 959px){
 	.container {
 		width: 100%;

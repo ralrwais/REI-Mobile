@@ -22344,7 +22344,16 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 					'Adventure Postcard'
 				)
 			),
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'camera', type: 'file', accept: 'image/*;capture=camera' })
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'div',
+				{ className: 'camera-input-wrapper' },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'button',
+					{ className: 'btn btn-mdb', id: 'btn-camera-input' },
+					'Start Creating'
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'camera', type: 'file', accept: 'image/*', capture: 'camera' })
+			)
 		);
 	}
 };
