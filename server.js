@@ -5,7 +5,7 @@ const axios = require('axios');
 const app = express();
 var PORT = process.env.PORT || 1225;
 
-app.use(express.static('public'));
+app.use('/public', express.static(path.join(__dirname, 'public/')));
 
 
 app.get('/', function(req, res){
