@@ -22352,7 +22352,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 					{ className: 'btn btn-mdb', id: 'btn-camera-input' },
 					'Start Creating'
 				),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'file', accept: 'image/*;capture=camera' })
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'photoInput', type: 'file', accept: 'image/*;capture=camera' })
 			)
 		);
 	}

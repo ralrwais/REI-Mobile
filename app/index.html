@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css">
 
+
 	<title>REI Mobile App</title>
 </head>
 <body>
@@ -15,8 +16,41 @@
 	<div id="app"></div>
 	
 
-	<script type="text/javascript" src="public/bundle.js"></script>
+<script type="text/javascript" src="public/bundle.js"></script>
 
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<script type="text/javascript">
+
+
+var photoInput = document.getElementById('photoInput');
+
+function sendPic() {
+var xml = new XMLHttpRequest();
+var data = new FormData();
+
+data.append('file', photoInput.files[0]);
+ data.append('api_key', 893158381572411);
+      data.append('timestamp', Date.now() / 1000);
+      data.append('upload_preset', 'an1hrkvd');
+ 
+
+xml.open("post", "https://api.cloudinary.com/v1_1/hi1kbxbyk/image/upload");
+	xml.send(data);
+
+xml.onload = function(){
+
+	var picUrl = JSON.parse(xml.response).url;
+	console.log(picUrl);
+	// xml.open("post", "/pics");
+	// xml.send({url: picUrl});
+	}
+}
+
+photoInput.addEventListener('change', sendPic, false);
+
+
+
+</script>
 </body>
 </html>
 

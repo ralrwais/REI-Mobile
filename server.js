@@ -18,6 +18,11 @@ app.get('/data', function(req, res){
 	res.download(path.join(__dirname, './public/grandcanyonvsyosemite.zip'));
 });
 
+// app.get('/pics', function(req, res){
+// 	// console.log(req.body);
+// 	res.send('Works');
+// });
+
 // axios.get('/url', {
 //     params: {
 //       baseURL: 'https://someurl.jpg'
@@ -51,7 +56,7 @@ app.get('/data', function(req, res){
 //   });  
 
 app.get('*', function(req, res){
-
+	
 });
 
 app.listen(PORT, function() {

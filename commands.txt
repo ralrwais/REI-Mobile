@@ -24,7 +24,7 @@ curl -X GET -H "Authorization: Bearer 82d39ceaa0ef122c78ea31fed8aaa84ce9343a25" 
 
 //command that predicts probability of image being one/the other label
 
-curl -X POST -H "Authorization: Bearer 82d39ceaa0ef122c78ea31fed8aaa84ce9343a25" -H "Cache-Control: no-cache" -H "Content-Type: multipart/form-data" -F "sampleLocation=https://www.destinationgoldcoast.com/Portals/0/Images/Blog/GarethMcGuigan/top-10-waterfalls-opt.jpg" -F "modelId=E4RA6UD3RPQBJX2MJEAEXJQM3E" https://api.einstein.ai/v2/vision/predict
+curl -X POST -H "Authorization: Bearer 82d39ceaa0ef122c78ea31fed8aaa84ce9343a25" -H "Cache-Control: no-cache" -H "Content-Type: multipart/form-data" -F "sampleLocation=http://res.cloudinary.com/hi1kbxbyk/image/upload/v1505183868/w7agc2tbpijnflr1lqol.jpg" -F "modelId=E4RA6UD3RPQBJX2MJEAEXJQM3E" https://api.einstein.ai/v2/vision/predict
 
 
 
