@@ -1,27 +1,22 @@
 steps to complete
 
-
-//create a POST request route that 
-
-//look at kidda code for filestack API which will upload photos to CDN and send back a JSON token with a url
+//make button trigger input (make fields same size)
 
 
-//look up Express creating post route and find a way to send a url to your node server
+use axios/post request to test url and probability in AI
 
-can use axios/post request
-
-//when you hit submit, it will call a post request to your express route 
-
-//in the express route in the server.js file have an app.post function with the route name (ex: /submitphoto)
-
-//capture and store photo URL 
 
 //use url to test probability in API
 
 //if probability is .96> and <1, it fits the location and should be linked to that locations filter
 
+//click button returns loading feedback
+
 //if it doesnt hit that probability of either location, return message "cant find location" OR have it be a generic filter with a greeting
 
 //design and implement filter and front end for displaying it
 
-//make button trigger input
+
+//convert js to jsx
+
+

@@ -18,7 +18,7 @@
 
 <script type="text/javascript" src="public/bundle.js"></script>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 
 
@@ -36,13 +36,20 @@ data.append('file', photoInput.files[0]);
 
 xml.open("post", "https://api.cloudinary.com/v1_1/hi1kbxbyk/image/upload");
 	xml.send(data);
+	
 
 xml.onload = function(){
 
 	var picUrl = JSON.parse(xml.response).url;
 	console.log(picUrl);
-	// xml.open("post", "/pics");
-	// xml.send({url: picUrl});
+	
+	$.post("/pics", {url: picUrl}, function( url ) {
+  		console.log(url);
+	});
+
+
+	xml.send({'url': picUrl});
+
 	}
 }
 

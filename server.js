@@ -1,11 +1,18 @@
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
+const bodyParser  = require('body-parser');
 
 const app = express();
 var PORT = process.env.PORT || 1225;
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+
 app.use('/public', express.static(path.join(__dirname, 'public/')));
+
 
 
 app.get('/', function(req, res){
@@ -18,45 +25,13 @@ app.get('/data', function(req, res){
 	res.download(path.join(__dirname, './public/grandcanyonvsyosemite.zip'));
 });
 
-// app.get('/pics', function(req, res){
-// 	// console.log(req.body);
-// 	res.send('Works');
-// });
+app.post('/pics', function(req, res){
+	console.log(req.body.url);
+});
 
-// axios.get('/url', {
-//     params: {
-//       baseURL: 'https://someurl.jpg'
-//     }
-//   })
-//   .then(function (response) {
-//     console.log(response);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
-
-//   axios.post('/url', {
-//     baseURL: 'https://someurl.jpg'
-//   })
-//   .then(function (response) {
-//     console.log(response);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
-
-// axios.get('https://api.github.com/')
-//   .then(function(){
-//     console.log('get request worked'); 
-//   }); 
-
-// axios.post('/stuff', { firstName: 'Rima', lastName: 'Alrwais' })
-//   .then(function(){
-//     console.log('saved successfully')
-//   });  
 
 app.get('*', function(req, res){
-	
+
 });
 
 app.listen(PORT, function() {
