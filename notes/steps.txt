@@ -3,11 +3,6 @@ steps to complete
 //make button trigger input (make fields same size)
 
 
-use axios/post request to test url and probability in AI
-
-
-//use url to test probability in API
-
 //if probability is .96> and <1, it fits the location and should be linked to that locations filter
 
 //click button returns loading feedback

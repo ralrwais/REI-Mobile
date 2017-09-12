@@ -1,5 +1,6 @@
 import React from 'react';
 import '../index.css';
+import LoadingIndicator from 'react-loading-indicator';
 
 class App extends React.Component{
 	render(){
@@ -14,6 +15,7 @@ class App extends React.Component{
 	  			<button className="btn btn-mdb" id="btn-camera-input">Start Creating</button>
 				<input id="photoInput" type="file" accept="image/*;capture=camera" />
 			</div>
+			<LoadingIndicator />
 		</div>
 		)
 	}

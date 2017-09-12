@@ -44,6 +44,8 @@ img {
     position: relative;
   }
   .camera-input-wrapper > input[type="file"] {
+    width: 150px;
+    height: 80px;
     font-size: 200px;
     position: absolute;
     top: 0;
