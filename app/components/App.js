@@ -12,7 +12,7 @@ class App extends React.Component{
 			</div>
 			<div className="camera-input-wrapper">
 	  			<button className="btn btn-mdb" id="btn-camera-input">Start Creating</button>
-				<input className="camera" type="file" accept="image/*" capture="camera" />
+				<input type="file" accept="image/*;capture=camera" />
 			</div>
 		</div>
 		)
