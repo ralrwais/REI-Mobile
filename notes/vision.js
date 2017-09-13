@@ -3,4 +3,4 @@
 
 }
 
-upload_preset : an1hrkvd;
+cloudinary upload_preset : an1hrkvd;

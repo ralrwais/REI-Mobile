@@ -10,6 +10,5 @@ steps to complete
 //design and implement filter and front end for displaying it
 
 
-//convert js to jsx
 
 
