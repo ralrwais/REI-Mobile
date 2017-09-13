@@ -1,7 +1,5 @@
 steps to complete
 
-//make button trigger input (make fields same size)
-
 
 //if probability is .96> and <1, it fits the location and should be linked to that locations filter
 
