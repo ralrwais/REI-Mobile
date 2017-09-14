@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import '../index.css';
+import * as style from '../index.css';
 import LoadingIndicator from 'react-loading-indicator';
 import axios from 'axios';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.changeHandler = this.changeHandler.bind(this);
     this.state = {
-      loading: false
+      loading: false,
+      postCardUrl: undefined
     };
+
+    this.changeHandler = this.changeHandler.bind(this);
+    this.buttonOrLoader = this.buttonOrLoader.bind(this);
   }
 
   changeHandler(e) {
@@ -33,37 +36,40 @@ class App extends Component {
           .post('/pics', { url })
           .then(response => {
             const aiData = response.data;
-            // turn the loader off now that loaded.
-            this.setState({ loading: false });
-            // Ai reponse data below
-            console.log('Ai reponse is', aiData);
+            console.log('AiData response', response)
+
+            if (aiData.success) {
+            	// turn the loader off now that loaded.
+            	this.setState({ loading: false });
+            	// Ai reponse data below
+            	console.log('Ai response is', aiData);
+            	this.setState({ postCardUrl: aiData.url })
+
+            } else {
+            	// If the Ai did not match anything 
+            	this.setState({ loading: false });
+            }
+            
           })
           .catch(err => {
             // Catch errors and stop leading event
-            this.setState({ leading: false });
+            console.log('Error is ', err);
+            this.setState({ loading: false });
           });
       })
       .catch(err => {
         // Catch errors and stop leading event
-        this.setState({ leading: false });
+        this.setState({ loading: false });
       });
   }
 
-  render() {
-    return (
-      <div className="container">
-        <img src="http://www.lovethispic.com/uploaded_images/127330-Greenland-Mountains.jpg" />
-        <div className="header">
-          <h1>REI</h1>
-          <h3>Adventure Postcard</h3>
-        </div>
-        {/* Load either the html button of the leader based on state of call to api */}
-        {this.state.loading ? (
-        <div className="camera-input-wrapper">
+  buttonOrLoader() {
+  	return this.state.loading ? (
+  			<div className="camera-input-wrapper">
         	 <LoadingIndicator />
-        </div>
+        	 </div>
         ) : (
-          <div className="camera-input-wrapper">
+        <div className="camera-input-wrapper">
             <button className="btn btn-mdb" id="btn-camera-input">
               Start Creating
             </button>
@@ -74,9 +80,32 @@ class App extends Component {
               accept="image/*;capture=camera"
             />
           </div>
-        )}
+        )
+       
+  }
+
+  render() {
+
+  	if (this.state.postCardUrl !== undefined) {
+
+  		return <div>Stand in for PostCard component</div>
+  		// return <Postcard url={this.state.postCardUrl} />
+
+  	} else {
+
+  		return (
+      <div className="container">
+        <img src="http://www.lovethispic.com/uploaded_images/127330-Greenland-Mountains.jpg" />
+        <div className="header">
+          <h1>REI</h1>
+          <h3>Adventure Postcard</h3>
+        </div>
+        { this.buttonOrLoader() }
       </div>
     );
+  	}
+
+    
   }
 }
 
