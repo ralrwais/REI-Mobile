@@ -23,6 +23,7 @@ app.get("/data", function(req, res) {
 
 app.post("/pics", function(req, res) {
   var imageURL = req.body.url;
+  // cloudinary.image(imageURL, {width: 400, height: 100, crop: "scale"});
 
   visionHelper(imageURL)
     .then(function(body) {
@@ -56,8 +57,8 @@ app.post("/pics", function(req, res) {
         cloudinary.v2.uploader.upload(
           imageURL,
           {
-            width: 2000,
-            height: 1000,
+            width: 3000,
+            height: 2000,
             crop: "limit",
             underlay: labelTemplate[highestProbLabel]
           },
