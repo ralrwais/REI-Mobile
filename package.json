@@ -9,7 +9,6 @@
     "devstart": "nodemon app/server/",
     "dev-wp": "webpack -w",
     "build": "webpack",
-    
     "deploy": "npm run build && npm run git-commit && npm run git-push"
   },
   "lint-staged": {
