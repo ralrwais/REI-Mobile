@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack && node app/server/",
+    "start": "node app/server/",
     "devstart": "nodemon app/server/",
     "dev-wp": "webpack -w",
     "build": "webpack",
@@ -33,6 +33,7 @@
     "cloudinary": "^1.9.0",
     "css-loader": "^0.28.7",
     "dotenv": "^4.0.0",
+    "express": "^4.15.4",
     "jest": "^21.0.2",
     "jsonwebtoken": "^8.0.0",
     "mdbootstrap": "^4.4.1",
