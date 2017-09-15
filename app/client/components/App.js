@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as style from "../index.css";
 import LoadingIndicator from "react-loading-indicator";
 import axios from "axios";
+import Postcard from "./Postcard.js";
 
 class App extends Component {
   constructor(props) {
@@ -82,15 +83,13 @@ class App extends Component {
   render() {
     if (this.state.postCardUrl !== undefined) {
       return (
-        <div className="container">
-          <img src={this.state.postCardUrl} />
-        </div>
+        <Postcard url={this.state.postCardUrl} />
       );
       // return <Postcard url={this.state.postCardUrl} />
     } else {
       return (
         <div className="container">
-          <img src="http://www.lovethispic.com/uploaded_images/127330-Greenland-Mountains.jpg" />
+          <img src="http://www.lovethispic.com/uploaded_images/127330-Greenland-Mountains.jpg" className="backgroundImg" />
           <div className="header">
             <h1>REI</h1>
             <h3>Adventure Postcard</h3>
