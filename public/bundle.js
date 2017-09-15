@@ -26028,22 +26028,14 @@ function Postcard({ url }) {
 			"div",
 			{ className: "shareButton" },
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-				"button",
-				{ className: "share" },
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					"a",
-					{ href: "http://www.facebook.com/sharer.php?u=https://rei-mobile.herokuapp.com/", target: "_blank" },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://simplesharebuttons.com/images/somacro/facebook.png", alt: "Facebook" })
-				)
+				"a",
+				{ href: "http://www.facebook.com/sharer.php?u=https://rei-mobile.herokuapp.com/", target: "_blank" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://simplesharebuttons.com/images/somacro/facebook.png", alt: "Facebook" })
 			),
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-				"button",
-				null,
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					"a",
-					{ href: "https://mail.google.com/share?url=https://rei-mobile.herokuapp.com/", target: "_blank" },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://simplesharebuttons.com/images/somacro/google.png", alt: "Google" })
-				)
+				"a",
+				{ href: "https://mail.google.com/share?url=https://rei-mobile.herokuapp.com/", target: "_blank" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "https://simplesharebuttons.com/images/somacro/google.png", alt: "Google" })
 			)
 		)
 	);

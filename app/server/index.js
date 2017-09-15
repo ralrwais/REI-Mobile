@@ -23,7 +23,6 @@ app.get("/data", function(req, res) {
 
 app.post("/pics", function(req, res) {
   var imageURL = req.body.url;
-  // cloudinary.image(imageURL, {width: 400, height: 100, crop: "scale"});
 
   visionHelper(imageURL)
     .then(function(body) {
