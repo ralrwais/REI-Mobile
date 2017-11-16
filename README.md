@@ -39,4 +39,6 @@ npm run dev-wp
 
 #### REI Adventure Postcard is available as a web-mobile application on Heroku https://rei-mobile.herokuapp.com/  
 
+#### -Please note, currently the AI is only trained to recognize images from the Grand Canyon or Yosemite. Please use images from one or the other place to generate a proper postcard.
+
 #### Keep Calm and Adventure On! 
