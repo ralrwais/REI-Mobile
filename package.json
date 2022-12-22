@@ -35,7 +35,7 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
     "jest": "^21.0.2",
-    "jsonwebtoken": "^8.0.0",
+    "jsonwebtoken": "^9.0.0",
     "mdbootstrap": "^4.4.1",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.3",
